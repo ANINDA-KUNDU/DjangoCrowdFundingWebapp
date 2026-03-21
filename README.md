@@ -5,9 +5,18 @@ I have used  **`Django`** and  **`Python`** for this project.
 > In Front -End, I have used HTML, CSS and JavaScript.
 > In Back -end I have used Django, Python, Sqlite and RESTApi.
 
-This projects falls under my **Personal Licence**.
+<br>
 
-==Aninda's Crowd Funding Web - app==
+This projects falls under my **Personal Licence**.
+---
+
+
+<br>
+
+<br>
+
+**Aninda's Crowd Funding Web - app**
+---
 
 #Some Screenshots are added
 
