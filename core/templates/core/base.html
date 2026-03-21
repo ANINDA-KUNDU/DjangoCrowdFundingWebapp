@@ -1,0 +1,30 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "{%  static 'core/css/style.css' %}">
+    <link rel = "stylesheet" href = "{%  static 'core/css/header.css'  %}">
+    <link rel = "stylesheet" href = "{%  static 'core/css/footer.css' %}">
+    <link rel = "stylesheet" href = "{%  static 'authenticate/css/signup.css' %}">
+    <link rel = "stylesheet" href = "{%  static 'authenticate/css/login.css' %}">
+    <link rel = "stylesheet" href = "{%  static 'authenticate/css/forget_password.css' %}">
+    <link rel = "stylesheet" href = "{%  static 'authenticate/css/forget_password_sent.css' %}">
+    <link rel = "stylesheet" href = "{%  static 'authenticate/css/reset_password.css' %}">
+    <link rel = "stylesheet" href = "{%  static 'fund/css/fund.css' %}">
+    <link rel = "stylesheet" href = "{%  static 'fund/css/success_page.css' %}">
+    <link rel = "stylesheet" href = "{%  static 'core/css/about.css' %}">
+    <title>{%  block title %}{%  endblock  %}</title>
+</head>
+<body>
+    {%  include 'core/partials/header.html' %}
+    <main>
+        {% block content %}
+        {%  endblock  %}
+    </main> 
+    {%  include 'core/partials/footer.html'  %}
+</body>
+    {%  block script %}
+    {%  endblock %}
+</html>

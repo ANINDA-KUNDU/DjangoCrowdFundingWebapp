@@ -1,0 +1,76 @@
+.garden {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+.marygold {
+    width: 40%;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 1px 10px 15px 1px #a19c9c;
+}
+.jasmine {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 3%;
+}
+.sunflower {
+    width: 94%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding-left: 15px;
+    font-size: 15px;
+}
+.lavender {
+    width: 96%;
+    height: 45px;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin-top: 3%;
+    font-size: 15px;
+    background-color: white;
+}
+.lavender:hover {
+    background: linear-gradient( to right, #82ef82 40%, #24f524 50%, #0a8f0a 60% );
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s infinite linear;
+    color: white;
+    font-weight: bold;
+}
+.london .error,
+.london .success,
+.error,
+.success {
+    display: block;
+    color: white;
+    text-align: center;
+    width: 50%;
+    margin: 8px auto;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+.london .error,
+.error {
+    background-color: #f94d4d;
+}
+.london .success,
+.success {
+    background-color: #43b443;
+}
+@media ( max-width: 768px ) {
+    .marygold {
+        width: 100%;
+    }
+    .lavender {
+        background-color: green;
+        color: white;
+        margin-top: 5%;
+    }
+}

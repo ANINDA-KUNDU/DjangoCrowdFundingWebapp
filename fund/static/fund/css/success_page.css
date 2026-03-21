@@ -1,0 +1,25 @@
+.flower {
+    height: 50vh;
+    text-align: center;
+}
+.daliah {
+    text-align: center;
+}
+.dandelion {
+    text-align: center;
+    margin: 0px;
+    font-size: 18px;
+    color: navy;
+}
+.dandelion::before {
+    content: "\2714";
+    color: green;
+    font-size: 40px;
+    border-radius: 50%;
+    background-color: #13de13;
+    height: 30%;
+    width: 20%;
+    margin-right: 2%;
+    transition: 0.25s ease;
+    scroll-behavior: smooth;
+}

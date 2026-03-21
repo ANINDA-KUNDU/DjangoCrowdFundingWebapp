@@ -1,0 +1,27 @@
+footer {
+    background-color: whitesmoke;
+    text-align: center;
+}
+.sofa {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.furniture {
+    width: 50%;
+}
+.almirah {
+    width: 50%;
+    text-align: center;
+}
+.table {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    margin: 2%;
+}
+.table:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}

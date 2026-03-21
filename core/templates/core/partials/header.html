@@ -1,0 +1,33 @@
+{% load static  %}
+<header>
+    <nav>
+        <div>
+            <a href = "{%  url 'home' %}" class = "bus">AnindaFund</a>
+        </div>
+
+        <div class = "burger" id = "burger" onclick = "toggleMenu()">
+            &#9776;
+        </div>
+        <div class = "road" id = "menu">
+            <a href = "{% url 'home'  %}" class = "truck">Home</a>
+            {%  if user.is_authenticated  %}
+                <a href = "{% url 'about'  %}" class = "truck">About</a>
+                <a href = "{% url 'logout'  %}" class = "truck">Logout</a>
+                <a href = "{% url 'fund'  %}" class = "truck">Fund</a>
+            {%  else %}
+                <a href = "{% url 'signup'  %}" class = "truck">Signup</a>
+                <a href = "{% url 'login' %}" class = "truck">Login</a>
+            {% endif  %}
+        </div>
+    </nav>
+</header>
+
+{%  block script %}
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("show");
+            document.getElementById("burger").classList.toggle("active");
+            document.documentElement.classList.toggle("menu-show");
+        }
+    </script>
+{%  endblock %}

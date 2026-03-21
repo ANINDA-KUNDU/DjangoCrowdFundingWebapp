@@ -1,0 +1,52 @@
+{%  extends 'core/base.html' %}
+{%  load static  %}
+{%  block title %}Home Page{%  endblock %}
+{%  block content %}
+
+
+<div class = "london">
+    {%  if messages %}
+        {%  for message in messages %}
+            {%  if message.tags == 'error' %}
+                <p class = "error">{{message}}</p>
+            {% else  %}
+                <p class = "success">{{message}}</p>
+            {%  endif %}
+        {%  endfor %}
+    {%  endif %}
+</div>
+
+{%  if user.is_authenticated  %}
+    <p class = "rocket">Welcome, {{user.username}}</p>
+{% else %}
+    <p>You are not logged in.</p>
+{%  endif %}
+
+
+<div class = "mug">
+    <img src = "{% static 'core/image/pic_3.jpg'  %}" alt = "first image" class = "glass">
+</div>
+<div class = "blanket">
+    <p>Create Change for good</p>
+    <p>and Contribute Positively for humanity</p>
+    <div class = "window">
+        <a href = "{%  url 'fund' %}" class = "aeroplane">Fund</a>
+    </div>
+</div>
+<div class = "bucket">
+    <div class = "bath">
+        <div class = "reading">
+            <p class = "soap">We are your always trusted friend.</p>
+            <p class = "scrubber">It's glory, novelity and humanity</p>
+            <p class = "shampoo">We are always in action.</p>
+        </div>
+        <div class = "woods">
+            <img src = "{%  static 'core/image/pic_1.jpg' %}" alt = "display picture" class = "water">
+        </div>
+    </div>
+</div>
+
+
+
+
+{%  endblock %}

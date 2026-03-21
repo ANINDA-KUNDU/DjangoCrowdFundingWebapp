@@ -1,0 +1,98 @@
+header {
+    margin: 0px;
+    padding: 0px;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+}
+nav:hover {
+    color: green;
+}
+.bus {
+    text-decoration: none;
+    color: navy;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20%;
+}
+.bus:hover {
+    scroll-behavior: smooth;
+    transition: 0.25s ease;
+}
+.burger {
+    display: none;
+}
+body .menu-show {
+    overflow: hidden;
+}
+.road {
+    margin-left: auto;
+    margin-right: 5%;
+}
+.truck {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+.truck:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    scroll-behavior: smooth;
+    transition: 0.25s ease;
+}
+@media ( max-width: 768px ) {
+    .bus {
+        font-size: 30px;
+        margin-left: 0px;
+    }
+    .burger {
+        display: block;
+        font-size: 0px;
+        margin-left: auto;
+        position: relative;
+        z-index: 1001;
+        cursor: pointer;
+    }
+    .burger:before {
+        content: "\2630";
+        font-size: 30px;
+    }
+    .burger.active::before {
+        content: "X";
+        font-size: 30px;
+        color: white;
+    }
+    .road {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100vh;
+        background-color: #093109;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        transform: translateY(100%);
+        transition: 0.25s ease;
+        scroll-behavior: smooth;
+    }
+    .road.show {
+        transform: translateX(0);
+    }
+    .truck {
+        color: white;
+        display: block;
+        font-size: 20px;
+    }
+    .body-menu {
+        overflow: hidden;
+    }
+}

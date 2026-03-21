@@ -1,0 +1,136 @@
+.hand {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.canvas {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.finger {
+    text-align: center;
+    width: 70%;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 5px 10px 15px 6px #857f7f;
+}
+.veins {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 4%;
+    margin-top: 3%;
+}
+.nerves {
+    width: 92%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 15px;
+    font-size: 15px;
+}
+.picture {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.notebook {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border: none;
+    border-radius: 25px;
+    position: relative;
+}
+.notebook:hover {
+    filter: grayscale(1);
+    transition: 0.25s ease;
+    cursor: pointer;
+    border: 3px solid black;
+}
+.joints {
+    width: 94%;
+    height: 40px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+.joints:hover {
+    background: linear-gradient( to right, #9797f6 40%, #4141ec 50%, #6c6cef 60% );
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s infinite linear;
+    border: 2px solid #070747;
+    font-weight: bold;
+    color: white;
+}
+@keyframes shimmer {
+    to {
+        background-position-x: 0%;
+    }
+}
+@media ( max-width: 768px ){
+    .hand {
+        width: 100%;
+    }
+    .picture {
+        width: 100%;
+        height: 80vh;
+        margin-bottom: 7%;
+    }
+    .canvas {
+        width: 100%;
+        margin-bottom: 8%;
+    }
+    .finger {
+        width: 98%;
+    }
+    .joints {
+        width: 96%;
+        background-color: #6a6afb;
+        color: white;
+    }
+}
+.hair {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.brain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.nail {
+    text-align: center;
+}
+.forehead {
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    gap: 8px;
+    padding: 1%;
+}
+.forehead:hover > p {
+    font-size: 18px;
+    font-weight: bold;
+    scroll-behavior: smooth;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+

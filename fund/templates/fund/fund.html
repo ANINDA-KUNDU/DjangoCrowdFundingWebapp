@@ -1,0 +1,71 @@
+{%  extends 'core/base.html' %}
+{%  load static %}
+{%  block title  %}Fund Page{% endblock  %}
+{%  block content %}
+
+
+<div class = "london">
+    {%  if messages  %}
+        {%  for message in messages %}
+            {%  if message.tags == 'error' %}
+                <p class = "error">{{message}}</p>
+            {% else %}
+                <p class = "success">{{message}}</p>
+            {%  endif %}
+        {%  endfor %}
+    {%  endif %}
+</div>
+
+<div class="hand">
+    <div class="picture">
+        <img src="{% static 'fund/image/devastation.jpg'  %}" alt="side image" class="notebook">
+    </div>
+    <div class="canvas">
+        <form method="POST" class="finger">
+            {% csrf_token  %}
+            <h1>Fund Page</h1>
+            <div>
+                <label class="veins">First Name</label>
+                <input type="first_name" name="first_name" placeholder="First Name" class="nerves">
+            </div>
+            <div>
+                <label class="veins">Last Name</label>
+                <input type="last_name" name="last_name" placeholder="Last Name" class="nerves">
+            </div>
+            <div>
+                <label class="veins">Address</label>
+                <input type="address" name="address" placeholder="Address" class="nerves">
+            </div>
+            <div>
+                <label class="veins">City</label>
+                <input type="city" name="city" placeholder="City" class="nerves">
+            </div>
+            <div>
+                <label class="veins">Pin</label>
+                <input type="pin" name="pin" placeholder="Pin" class="nerves">
+            </div>
+            <div>
+                <label class="veins">Amount</label>
+                <input type="amount" name="amount" placeholder="Amount like $1" class="nerves">
+            </div>
+            <button type="submit" class="joints">Fund</button>
+        </form>
+    </div>
+</div>
+
+
+<h1 class = "nail">Our Heroes</h1>
+<div class="hair">
+    <div class="brain">
+        {% for fund in funds   %}
+        <div class="forehead">
+            <p>{{fund.first_name}}</p>
+            <p>{{fund.last_name}}</p>
+        </div>
+        {%  endfor  %}
+    </div>
+</div>
+
+
+
+{%  endblock  %}
